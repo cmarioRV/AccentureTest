@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IVu-6x-Ha6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Browse-->
+        <scene sceneID="hTF-aU-mbW">
+            <objects>
+                <navigationController title="Browse" automaticallyAdjustsScrollViewInsets="NO" id="IVu-6x-Ha6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="First" image="First" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U58-7W-wiN">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.1212508603206968" green="0.17308649102425597" blue="0.468730171319797" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="75" kind="relationship" relationship="rootViewController" id="105"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ic3-tP-dXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="-776"/>
+        </scene>
+        <!--Búsqueda de libros-->
+        <scene sceneID="74">
+            <objects>
+                <tableViewController id="75" customClass="BrowseViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="76">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ITEM_CELL" textLabel="2166" detailTextLabel="2167" rowHeight="55" style="IBUITableViewCellStyleSubtitle" id="79">
+                                <rect key="frame" x="0.0" y="22" width="375" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="79" id="80">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="54.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2166">
+                                            <rect key="frame" x="15" y="10" width="35" height="21.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2167">
+                                            <rect key="frame" x="15" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="118" kind="show" identifier="" id="152"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BOOK_CELL" rowHeight="116" id="XPL-u0-ksH" customClass="BookCell">
+                                <rect key="frame" x="0.0" y="77" width="375" height="116"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XPL-u0-ksH" id="qAe-iQ-DFR">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="115.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Book.png" translatesAutoresizingMaskIntoConstraints="NO" id="gia-Se-e10">
+                                            <rect key="frame" x="20" y="5" width="105.5" height="105.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="gia-Se-e10" secondAttribute="height" multiplier="1:1" id="yGr-uA-knl"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imr-aC-N8H">
+                                            <rect key="frame" x="133" y="5" width="178" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbW-es-cGB">
+                                            <rect key="frame" x="133" y="25.5" width="178" height="85"/>
+                                            <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="imr-aC-N8H" firstAttribute="top" secondItem="gia-Se-e10" secondAttribute="top" id="0oc-26-Bf8"/>
+                                        <constraint firstItem="gia-Se-e10" firstAttribute="leading" secondItem="qAe-iQ-DFR" secondAttribute="leading" constant="20" id="13u-ec-c08"/>
+                                        <constraint firstItem="imr-aC-N8H" firstAttribute="leading" secondItem="QbW-es-cGB" secondAttribute="leading" id="2IB-gs-DJW"/>
+                                        <constraint firstItem="QbW-es-cGB" firstAttribute="top" secondItem="imr-aC-N8H" secondAttribute="bottom" id="4TA-EW-xvJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="imr-aC-N8H" secondAttribute="trailing" constant="30" id="5Yv-Ih-g5J"/>
+                                        <constraint firstItem="imr-aC-N8H" firstAttribute="leading" secondItem="gia-Se-e10" secondAttribute="trailing" constant="7.5" id="TXB-zh-vUc"/>
+                                        <constraint firstAttribute="bottom" secondItem="gia-Se-e10" secondAttribute="bottom" constant="5" id="jxy-F4-PZG"/>
+                                        <constraint firstItem="imr-aC-N8H" firstAttribute="trailing" secondItem="QbW-es-cGB" secondAttribute="trailing" id="kkx-Al-FFn"/>
+                                        <constraint firstItem="gia-Se-e10" firstAttribute="top" secondItem="qAe-iQ-DFR" secondAttribute="top" constant="5" id="mgm-pb-fbo"/>
+                                        <constraint firstItem="QbW-es-cGB" firstAttribute="bottom" secondItem="gia-Se-e10" secondAttribute="bottom" id="tdZ-Se-2R8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bookImageView" destination="gia-Se-e10" id="sKk-Z6-45v"/>
+                                    <outlet property="subtitleLabel" destination="QbW-es-cGB" id="qRe-Qs-olR"/>
+                                    <outlet property="titleLabel" destination="imr-aC-N8H" id="ZjH-UR-ep5"/>
+                                    <segue destination="118" kind="show" identifier="NavigateToItemDetailSegue" id="hZ0-ur-MPm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="75" id="77"/>
+                            <outlet property="delegate" destination="75" id="78"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Búsqueda de libros" id="104"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1479.2" y="-776.76161919040487"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="117">
+            <objects>
+                <viewController id="118" customClass="ItemDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="115"/>
+                        <viewControllerLayoutGuide type="bottom" id="116"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="119">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyI-ya-Spc">
+                                <rect key="frame" x="30" y="394.5" width="315" height="20.5"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTw-9H-mov">
+                                <rect key="frame" x="30" y="423" width="315" height="17.5"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFo-z1-VOY">
+                                <rect key="frame" x="30" y="445.5" width="315" height="17.5"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tg1-Ly-CIX">
+                                <rect key="frame" x="70" y="103" width="235" height="235"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tg1-Ly-CIX" secondAttribute="height" multiplier="1:1" id="N4H-w6-76h"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Url" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwH-cb-uQp">
+                                <rect key="frame" x="30" y="468" width="315" height="17.5"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtV-rR-Zhj">
+                                <rect key="frame" x="30" y="368" width="315" height="24.5"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN-Bold" family="Sinhala Sangam MN" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jyI-ya-Spc" firstAttribute="trailing" secondItem="GtV-rR-Zhj" secondAttribute="trailing" id="ANN-4U-YQw"/>
+                            <constraint firstItem="jyI-ya-Spc" firstAttribute="leading" secondItem="GtV-rR-Zhj" secondAttribute="leading" id="Ccs-SP-V8Q"/>
+                            <constraint firstAttribute="trailing" secondItem="XTw-9H-mov" secondAttribute="trailing" constant="30" id="KSB-4F-Nnn"/>
+                            <constraint firstItem="aFo-z1-VOY" firstAttribute="trailing" secondItem="XTw-9H-mov" secondAttribute="trailing" id="LpM-La-dnk"/>
+                            <constraint firstItem="GtV-rR-Zhj" firstAttribute="leading" secondItem="119" secondAttribute="leading" constant="30" id="PLo-pU-d8f"/>
+                            <constraint firstItem="tg1-Ly-CIX" firstAttribute="leading" secondItem="119" secondAttribute="leading" constant="70" id="QWU-cl-Tj9"/>
+                            <constraint firstItem="GtV-rR-Zhj" firstAttribute="top" secondItem="tg1-Ly-CIX" secondAttribute="bottom" constant="30" id="RfS-7I-hKD"/>
+                            <constraint firstItem="aFo-z1-VOY" firstAttribute="top" secondItem="XTw-9H-mov" secondAttribute="bottom" constant="5" id="Xny-FZ-2Av"/>
+                            <constraint firstItem="jyI-ya-Spc" firstAttribute="centerX" secondItem="119" secondAttribute="centerX" id="ZLg-V8-Z6d"/>
+                            <constraint firstItem="iwH-cb-uQp" firstAttribute="top" secondItem="aFo-z1-VOY" secondAttribute="bottom" constant="5" id="iOb-sg-kjV"/>
+                            <constraint firstItem="iwH-cb-uQp" firstAttribute="trailing" secondItem="aFo-z1-VOY" secondAttribute="trailing" id="kFg-f0-Ihl"/>
+                            <constraint firstItem="XTw-9H-mov" firstAttribute="top" secondItem="jyI-ya-Spc" secondAttribute="bottom" constant="8" id="nbF-YA-nBm"/>
+                            <constraint firstItem="GtV-rR-Zhj" firstAttribute="centerX" secondItem="119" secondAttribute="centerX" id="srW-Zs-jeE"/>
+                            <constraint firstItem="jyI-ya-Spc" firstAttribute="top" secondItem="GtV-rR-Zhj" secondAttribute="bottom" constant="2" id="u9U-TW-as9"/>
+                            <constraint firstItem="XTw-9H-mov" firstAttribute="leading" secondItem="119" secondAttribute="leading" constant="30" id="urY-ey-B3G"/>
+                            <constraint firstItem="tg1-Ly-CIX" firstAttribute="centerX" secondItem="119" secondAttribute="centerX" id="vfa-xJ-OsB"/>
+                            <constraint firstItem="tg1-Ly-CIX" firstAttribute="top" secondItem="115" secondAttribute="bottom" constant="39" id="vse-JV-GOz"/>
+                            <constraint firstItem="aFo-z1-VOY" firstAttribute="leading" secondItem="XTw-9H-mov" secondAttribute="leading" id="wJW-n6-zOB"/>
+                            <constraint firstItem="iwH-cb-uQp" firstAttribute="leading" secondItem="aFo-z1-VOY" secondAttribute="leading" id="xlV-oo-xVj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="200"/>
+                    <connections>
+                        <outlet property="BookISBNLabel" destination="XTw-9H-mov" id="UOt-ef-SM9"/>
+                        <outlet property="BookImage" destination="tg1-Ly-CIX" id="0nd-jy-cdi"/>
+                        <outlet property="BookPriceLabel" destination="aFo-z1-VOY" id="1wN-uQ-kAn"/>
+                        <outlet property="BookSubtitleLabel" destination="jyI-ya-Spc" id="JBd-QB-Oj5"/>
+                        <outlet property="BookTitleLabel" destination="GtV-rR-Zhj" id="0gp-So-kbA"/>
+                        <outlet property="BookUrlLabel" destination="iwH-cb-uQp" id="Vaa-bJ-XOu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="120" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2240" y="-776"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Book.png" width="16" height="16"/>
+        <image name="First" width="32" height="30"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="152"/>
+    </inferredMetricsTieBreakers>
+</document>
