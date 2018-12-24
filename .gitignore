@@ -187,3 +187,7 @@ FakesAssemblies/
 /packages
 
 *.userprefs
+.vs/AccentureTest/xs/sqlite3/db.lock
+.vs/AccentureTest/xs/sqlite3/storage.ide
+.vs/AccentureTest/xs/sqlite3/storage.ide-shm
+.vs/AccentureTest/xs/sqlite3/storage.ide-wal
